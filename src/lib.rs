@@ -545,7 +545,6 @@ impl<T: Trait> Module<T> {
 			}
 		}
 		// safe to do this late because of the test in the first line of the function
-		// safe to substrate remaining because we initialize it with amount and never increase it
 		let new_supply = coin_supply + amount - remaining;
 		<CoinSupply>::put(new_supply);
 		<Bonds<T>>::put(bonds);
